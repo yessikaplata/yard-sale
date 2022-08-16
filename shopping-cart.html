@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>My order</title>
+    <style>
+        /*css variables*/
+        :root {
+            --dark: #232830;
+            --black: #000000;
+            --white: #FFFFFF;
+            --hospital-green: #ACD9B2;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+
+        .order-container {
+            width: 400px;
+            position: absolute;
+            right: 0;
+            padding: 0 24px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        .order-content {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--text-input-field);
+            border-radius: 8px;
+            padding: 0 20px;
+            align-items: center;
+            margin-top: 24px;
+            height: 80px;
+        }
+
+        .order-content p:first-child {
+            display: flex;
+            flex-direction: column;
+            color: var(--black);
+        }
+
+        .order-content p span:first-child {
+            font-weight: bold;
+            font-size: var(--md);
+        }
+
+        .order-content p span:nth-child(2) {
+            font-weight: lighter;
+            font-size: var(--sm);
+            margin-top: 6px;
+        }
+
+        .order-content p:nth-child(2) {
+            font-weight: bold;
+            color: var(--dark);
+            font-size: var(--md);
+        }
+
+        .order-header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+
+        .order-header img {
+            margin-right: 24px;
+            transform: rotate(180deg);
+            cursor: pointer;
+        }
+
+        .order-container h1 {
+            font-size: var(--lg);
+        }
+
+        .order-products {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            margin-top: 24px;
+            align-items: center;
+        }
+
+        .order-products figure {
+            margin: 0;
+        }
+
+        .order-products img:first-child {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .order-products p:nth-child(2) {
+            margin-left: 20px;
+            font-weight: lighter;
+            font-size: var(--sm);
+        }
+
+        .order-products p:nth-child(3) {
+            font-weight: bold;
+            color: var(--dark);
+            font-size: var(--md);
+        }
+
+        .order-products .delete {
+            margin-left: 24px;
+            cursor: pointer;
+        }
+
+
+        .primary-button {
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: 8px;
+            color: var(--white);
+            height: 52px;
+            font-size: var(--md);
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .checkout-button {
+            margin: 24px 0;
+        }
+
+        @media (max-width: 640px) {
+            .order-content {
+                margin-top: 24px;
+            }
+
+            .order-header {
+                display: none;
+            }
+
+            .order-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="order-container">
+        <div>
+            <div class="order-header">
+                <img src="./icons/flechita.svg" alt="">
+                <h1>Shopping cart</h1>
+            </div>
+            <div class="order-products">
+                <figure>
+                    <img src="https://images.pexels.com/photos/1863621/pexels-photo-1863621.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        alt="product">
+                </figure>
+                <p>Succulent</p>
+                <p>$120,00</p>
+                <img src="./icons/icon_close.png" alt="close" class="delete">
+            </div>
+            <div class="order-products">
+                <figure>
+                    <img src="https://images.pexels.com/photos/9130800/pexels-photo-9130800.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        alt="product">
+                </figure>
+                <p>Succulent</p>
+                <p>$120,00</p>
+                <img src="./icons/icon_close.png" alt="close" class="delete">
+            </div>
+            <div class="order-products">
+                <figure>
+                    <img src="https://images.pexels.com/photos/6231758/pexels-photo-6231758.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        alt="product">
+                </figure>
+                <p>Succulent</p>
+                <p>$120,00</p>
+                <img src="./icons/icon_close.png" alt="close" class="delete">
+            </div>
+
+        </div>
+        <div>
+            <div class="order-content">
+                <p>
+                    <span>Total</span>
+                </p>
+                <p>$360,00</p>
+            </div>
+            <button class="primary-button checkout-button">
+                <span>Checkout</span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
