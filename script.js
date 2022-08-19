@@ -86,8 +86,7 @@ function loadProducts() {
         const imgIconCart = document.createElement('img');
         imgIconCart.setAttribute('src', './icons/bt_add_to_cart.svg');
         figure.appendChild(imgIconCart);
-        divProductInfo.append(divInfo, figure);
-     
+        divProductInfo.append(divInfo, figure);     
 
         const divProduct = document.createElement('div');
         divProduct.classList.add('product-card');
@@ -98,7 +97,7 @@ function loadProducts() {
 }
 
 function loadProductsV2() {
-    getProducts();
+    const productList =  getProducts();
 
     //Add productos
     const divContainer = document.querySelector('.cards-container');
