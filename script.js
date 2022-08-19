@@ -1,8 +1,20 @@
 const navbarEmail = document.querySelector('.navbar-email')
-navbarEmail.addEventListener('click', toggleDesktopMenu);
+const navbarMobileMenuIcon = document.querySelector('.menu')
 
-function toggleDesktopMenu(){
+navbarEmail.addEventListener('click', toggleDesktopMenu);
+navbarMobileMenuIcon.addEventListener('click', toggleMobileMenu);
+
+function toggleDesktopMenu() {
     const desktopMenu = document.querySelector('.desktop-menu');
-    desktopMenu.classList.toggle('inactive');
-    
+    toggleHtmlElement(desktopMenu);
+
+}
+
+function toggleMobileMenu() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    toggleHtmlElement(mobileMenu);
+}
+
+function toggleHtmlElement(element) {
+    element.classList.toggle('inactive');
 }
