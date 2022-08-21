@@ -18,14 +18,15 @@
         <div class="navbar-left">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
             <ul>
-                <li><a href="./">All</a></li>
-                <li><a href="./">Clothes</a></li>
-                <li><a href="./">Electronics</a></li>
-                <li><a href="./">Furnitures</a></li>
-                <li><a href="./">Toys</a></li>
-                <li><a href="./">Other</a></li>
+                <li><a href="./index.html">All</a></li>
+                <li><a href="./index.html">Clothes</a></li>
+                <li><a href="./index.html">Electronics</a></li>
+                <li><a href="./index.html">Furnitures</a></li>
+                <li><a href="./index.html">Toys</a></li>
+                <li><a href="./index.html">Other</a></li>
             </ul>
         </div>
+
         <div class="navbar-right">
             <ul>
                 <li class="navbar-email">correo@dominio.com</li>
@@ -111,12 +112,39 @@
                 </button>
             </div>
         </div>
+
     </nav>
 
     <section class="main-container">
-        <div class="cards-container">
+        <div id="cards-container" class="cards-container">
         </div>
     </section>
+    <aside id="product-container-box" class="product-container-box inactive">
+        <aside id="product-container" class="product-container">
+            <div class="close-container">
+                <img src="./icons/icon_close.png" alt="close" class="close-image">
+            </div>
+            <img src="https://images.pexels.com/photos/9130800/pexels-photo-9130800.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="product" class="product-image">
+            <div class="product-info">
+                <p id="product-info-price">$120,00</p>
+                <p id="product-info-name">Succulent</p>
+                <p>Quisque feugiat hendrerit dignissim. Sed vulputate rutrum orci sit amet cursus. Nulla vel sapien nec
+                    eros
+                    semper maximus vitae eget lacus. Fusce hendrerit, ligula sit amet imperdiet tempus, odio dui
+                    scelerisque
+                    lectus, convallis vulputate ex velit at lectus.</p>
+                <button class="primary-button add-cart-button">
+                    <img src="./icons/bt_add_to_cart.svg" alt="Add to cart">
+                    <span>Add to cart</span>
+                </button>
+            </div>
+        </aside>
+    </aside>
+    
+    <div class="product-container-modal-box inactive">
+    </div>
+
 
     <script src="./script.js"></script>
 </body>
